@@ -24,7 +24,7 @@ Because this project is on top of datasink, software dependencies are almost the
 On top of datasink environment, an LSF system is required with module selfsched and jobs should be submitted using 'bsub' command.
 
 ## Data
-We have overall > 60,000 sequences coming from 19 pathogentic bacteria and 277 GO term profiles
+We have overall > 60,000 sequences coming from 19 pathogentic bacteria and 277 GO term profiles.
 All GO terms data are further categorized in to molecular function and biological process based on their ontology categories.
 Let's look at the structure of how we organized the data:
 	/path/to/main/src/ > mf/ > GO*******/
@@ -35,14 +35,12 @@ And, each individual GO term data folder contains following 3 files initially:
 * classifiers.txt
 
 GO*******.arff file contains the attributes for training and testing, weka.properties is the file specified the weka properties in training the data and classifiers.txt lists all needed classifiers and associated parameters.
-For more detailed information, please have a look at files in sample_data folder
+For more detailed information, please have a look at files in sample_data folder.
 
 ## Training base predictors
 > cd submit_lsf
-To submit one single job:
-> python submitDatasink.py /path/to/data
-To submit jobs for all data in one folder:
-> python submitByFolder.py /path/to/all/data/folder
+> python submitDatasink.py /path/to/data (to submit one single job)
+> python submitByFolder.py /path/to/all/data/folder (to submit jobs for all data in one folder:)
 
 ## 5-fold cross-validation
 We use 5 fold inner cross-validation to train/test 12 base predictors and 5 fold outer cross-validation to train/test ensembles. Since the training for base predictors and ensembles are independent, the model prevents overfittting.
