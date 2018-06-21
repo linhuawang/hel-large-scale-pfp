@@ -1,6 +1,6 @@
-# hel-large-scale-pfp: Heterogeneous ensemble learning for large scale protein function prediction
+# hel-large-scale-pfp: Heterogeneous ensemble learning for large scale protein function prediction (PFP)
 
-The scirpts in this repository is used to reproduce the results for our large-scale assessment of heterogeneous ensembles in PFP. 
+The scripts in this repository is used to reproduce the results for our large-scale assessment of heterogeneous ensembles in PFP. 
 Heterogeneous enesmble training is based on previous built software: datasink by Sean Whalen (https://github.com/shwhalen/datasink)
 The following scripts directly or largely come from Sean's code in datasink:
 * Pipeline.groovy (slightly modified)
@@ -21,7 +21,7 @@ Because this project is on top of datasink, software dependencies are almost the
 * [scikit-learn](http://scikit-learn.org) 0.14
 	* [SciPy](http://www.scipy.org) 0.12
 
-On top of datasink environment, an LSF system is required with module selfsched and jobs should be submitted using 'bsub' command.
+On top of datasink environment, an LSF system is required with module selfsched. Jobs should be submitted using 'bsub' command.
 
 ## Data
 We have overall > 60,000 sequences coming from 19 pathogentic bacteria and 277 GO term profiles.
