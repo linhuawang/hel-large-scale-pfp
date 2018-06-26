@@ -43,10 +43,9 @@ For more detailed information, please have a look at files in sample_data folder
 	python submitByFolder.py /path/to/all/data/folder (to submit jobs for all data in one folder)
 
 ## 5-fold cross-validation
-We use 5 fold inner cross-validation to train/test 12 base predictors and 5 fold outer cross-validation to train/test ensembles. Since the training for base predictors and ensembles are independent, the model prevents overfittting.
-In 5-fold cross-valitaion, for ensemble building, we tried 8 different stackig methods using diverse meta classifiers, ensemble selection method - CES and one naive ensemble method - mean.
-Sample data is in sample_data/GO0000166-5fold/
-Evaluations are using code in folder evaluation
+We use 5 fold inner cross-validation to train/test 12 base predictors and 5 fold outer cross-validation to train/test ensembles. Since the training for base predictors and ensembles are independent, the model prevents overfittting. In 5-fold cross-valitaion, for ensemble building, we tried 8 different stackig methods using diverse meta classifiers, ensemble selection method - CES and one naive ensemble method - mean.
+* Sample data is in sample_data/GO0000166-5fold/.
+* Evaluations are using code in folder evaluation.
 
 ## leave-one-species-out
 Since there are 19 species used in this study,leave-one-species-out validation might infer important biological information. In every iteration, we used 18 species to train and the left-out species to test. Only GO terms with more than 10 test sequences were evaluated.
