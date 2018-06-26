@@ -26,7 +26,7 @@ On top of datasink environment, an LSF system is required with module selfsched.
 ## Data
 We have overall > 60,000 sequences coming from 19 pathogentic bacteria and 277 GO term profiles.
 All GO terms data are further categorized in to molecular function and biological process based on their ontology categories.
-Let's look at the structure of how we organized the data:
+Let's have a look at how we organized the data:
 	/path/to/main/src/ > mf/ > GO*******/
 	/path/to/main/src/ > bp/ > GO*******/
 And, each individual GO term data folder contains following 3 files initially:
@@ -49,7 +49,7 @@ Sample data is in sample_data/GO0000166-5fold/
 Evaluations are using code in folder evaluation
 
 ## leave-one-species-out
-Since there are 19 species used in this study,leave-one-species-out validation might infer important biological information. In every iteration, we used 18 species to train and the left-out species to test. By doing so, if one species has less than 10 samples for testing one GO term, we ignore this GO term testing for this species.
+Since there are 19 species used in this study,leave-one-species-out validation might infer important biological information. In every iteration, we used 18 species to train and the left-out species to test. Only GO terms with more than 10 test sequences were evaluated.
 * Only Stacking using Logistic Regression is used in leave-one-species-out evaluation because it was the best performed ensemble method in 5-fold cross-validation.
 * Sample data is in sample_data/GO0000166-loso/.
-* Predictions are generated using lrs-loso.py
+* Predictions are generated using lrs_loso.py

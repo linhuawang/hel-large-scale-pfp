@@ -41,7 +41,6 @@ if 'foldAttribute' in p:
     fold_values = headers[p['foldAttribute']]
 else:
     fold_values = range(int(p['foldCount']))
-bag_count = int(p['bagCount'])
 stacker = LogisticRegression()
 
 # leave-one-out validataion
