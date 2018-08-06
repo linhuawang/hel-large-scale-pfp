@@ -9,7 +9,7 @@ The following scripts directly or largely come from Sean's code in datasink:
 * generate_jobs.py (largely modified from generate.py in datasink)
 
 ## Setup environments
-Because this project is on top of datasink, software dependencies are almost them same as datasink, so the followings are required:
+Because this project is on top of datasink, software dependencies are almost the same as Datasink, so the following dependencies are required:
 
 * Java
 * [Groovy](http://groovy.codehaus.org)
@@ -21,7 +21,7 @@ Because this project is on top of datasink, software dependencies are almost the
 * [scikit-learn](http://scikit-learn.org) 0.14
 	* [SciPy](http://www.scipy.org) 0.12
 
-On top of datasink environment, an LSF system is required with module selfsched. Jobs should be submitted using 'bsub' command.
+On top of datasink environment, an LSF system is required with built-in module selfsched. Jobs should be submitted using 'bsub' command.
 
 ## Data
 We have overall > 60,000 sequences coming from 19 pathogentic bacteria and 277 GO term profiles.
