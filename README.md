@@ -1,6 +1,6 @@
 # LargeGOPred: Heterogeneous ensemble learning for large-scale GO term prediction
 
-The scripts in this repository is used to reproduce the results for our large-scale assessment of heterogeneous ensembles in protein function predicton (PFP). 
+The scripts in this repository are used to reproduce the results for our recent work on large-scale assessment of heterogeneous ensembles in protein function predicton (PFP). 
 Heterogeneous enesmble training is based on previous built software: datasink by Sean Whalen (https://github.com/shwhalen/datasink)
 The following scripts directly or largely come from Sean's code in datasink:
 * Pipeline.groovy (slightly modified)
