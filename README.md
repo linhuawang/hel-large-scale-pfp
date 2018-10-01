@@ -1,12 +1,21 @@
 # LargeGOPred: Heterogeneous ensemble learning for large-scale GO term prediction
 
-The scripts in this repository are used to reproduce the results for our recent work on large-scale assessment of heterogeneous ensembles in protein function predicton (PFP). 
+The scripts in this repository are used to reproduce the results for our recent work on large-scale assessment of heterogeneous ensembles in protein function predicton (PFP) (https://f1000research.com/articles/7-1577/v1). 
+
+To cite this work:
+Wang L, Law J, Kale SD et al. Large-scale protein function prediction using heterogeneous ensembles [version 1; referees: awaiting peer review]. F1000Research 2018, 7(ISCB Comm J):1577
+(doi: 10.12688/f1000research.16415.1)
+
 Heterogeneous enesmble training is based on previous built software: datasink by Sean Whalen (https://github.com/shwhalen/datasink)
 The following scripts directly or largely come from Sean's code in Datasink:
 * Pipeline.groovy (slightly modified)
 * common.py 
 * combine.py
 * generate_jobs.py (largely modified from generate.py in datasink)
+
+## Data availability
+The data underlying this study is available from Zenodo. Dataset 1: Data for LargeGOPred (http://doi.org/10.5281/zenodo.1434450). Model training, testing and evaluatoin are based on this dataset. Additional formatting is necessary if you use your own ARFF files. Please cite as the following if you are using this dataset:
+* Linhua W: Data for LargeGOPred [Data set]. Zenodo. 2018. http://www.doi.org/10.5281/zenodo.1434450
 
 ## Setup environments
 The following dependencies are required:
