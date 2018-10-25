@@ -9,7 +9,7 @@ from os import mkdir
 from os.path import abspath, exists
 from sys import argv
 from numpy import array, column_stack
-from numpy.random import choice, seed
+from numpy.random import choice, seed, append
 from pandas import DataFrame, concat
 from sklearn.cluster import MiniBatchKMeans
 from sklearn.linear_model import LogisticRegression
@@ -126,8 +126,8 @@ def mean_fmax(path):
         _,_,test_df,label = common.read_fold(path,fold)
         test_df = common.unbag(test_df, 10)
         predict = test_df.mean(axis=1).values
-        predictions += predict
-        labels += label
+        predictions = append(predictions,predict)
+        labels = append(labels,label)
     fmax = '%.3f' %(common.fmax_score(labels,predictions))
     return fmax
 
@@ -143,9 +143,9 @@ def bestbase_fmax(path):
         _,_,test_df,label = common.read_fold(path,fold)
         test_df = common.unbag(test_df, 10)
         predictions.append(test_df)
-        labels += label
+        labels = append(labels,label)
     predictions = concat(predictions)
-    fmax_list = [common.fmax_core(labels,predictions[col].tolist()) for col in list(predictions)]
+    fmax_list = [common.fmax_score(labels,predictions[col].tolist()) for col in list(predictions)]
     return max(fmax_list)
 
 
