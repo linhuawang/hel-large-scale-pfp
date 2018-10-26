@@ -56,9 +56,5 @@ We use 5 fold inner cross-validation to train/test 12 base predictors and 5 fold
 * Sample data is in sample_data/GO0000166-5fold/
 * Evaluations are using code in folder evaluation
 
-## Leave-one-species-out validation
-Since there are 19 species used in this study,leave-one-species-out validation might infer important biological information. In every iteration, we used 18 species to train and the left-out species to test. Only GO terms with more than 10 test sequences were evaluated.
-* Only Stacking using Logistic Regression is used in leave-one-species-out evaluation because it was the best performed ensemble method in 5-fold cross-validation
-* Sample data is in sample_data/GO0000166-loso/
-* Predictions are generated using lrs_loso.py
+
 
