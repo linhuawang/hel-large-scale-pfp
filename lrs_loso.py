@@ -2,9 +2,6 @@
 
 """
     This scirpt is used for stacking using logistic regression in leave-one-species-out validation
-    This script is based on Sean Whalen's script for package: datasink (https://github.com/shwhalen/datasink)
-    datasink: A Pipeline for Large-Scale Heterogeneous Ensemble Learning
-    Copyright (C) 2013 Sean Whalen
 """
 from os import mkdir
 from os.path import abspath, exists

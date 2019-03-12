@@ -1,7 +1,5 @@
 """
     This script is used to get performance for CES, mean ensemble and best base classifier,
-    Methods for getting CES performance are based on code from Sean Whalen:datasink (https://github.com/shwhalen/datasink)
-    datasink: A Pipeline for Large-Scale Heterogeneous Ensemble Learning
 """
 
 from time import time

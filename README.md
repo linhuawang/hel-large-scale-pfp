@@ -6,13 +6,6 @@ To cite this work:
 Wang L, Law J, Kale SD et al. Large-scale protein function prediction using heterogeneous ensembles [version 1; referees: awaiting peer review]. F1000Research 2018, 7(ISCB Comm J):1577
 (doi: 10.12688/f1000research.16415.1)
 
-Heterogeneous enesmble training is based on previous built software: datasink by Sean Whalen (https://github.com/shwhalen/datasink)
-The following scripts directly or largely come from Sean's code in Datasink:
-* Pipeline.groovy (slightly modified)
-* common.py 
-* combine.py
-* generate_jobs.py (largely modified from generate.py in datasink)
-
 ## Data availability
 The data underlying this study is available from Zenodo. Dataset 1: Data for LargeGOPred (http://doi.org/10.5281/zenodo.1434450). Model training, testing and evaluatoin are based on this dataset. Additional formatting is necessary if you use your own ARFF files. Please cite as the following if you are using this dataset:
 * Linhua W: Data for LargeGOPred [Data set]. Zenodo. 2018. http://www.doi.org/10.5281/zenodo.1434450
@@ -48,8 +41,7 @@ For more detailed information, please have a look at files in sample_data folder
 
 ## Train base predictors
 	cd submit_lsf
-	python submitDatasink.py /path/to/data (to submit one single job)
-	python submitByFolder.py /path/to/all/data/folder (to submit jobs for all data in one folder)
+	python submitDatasink.py -P /path/to/data (to submit one single job) [other args]
 
 ## 5-fold cross-validation
 We use 5 fold inner cross-validation to train/test 12 base predictors and 5 fold outer cross-validation to train/test ensembles. Since the training for base predictors and ensembles are independent, the model prevents overfittting. In 5-fold cross-valitaion, for ensemble building, we tried 8 different stackig methods using diverse meta classifiers, ensemble selection method - CES and one naive ensemble method - mean.
