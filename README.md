@@ -3,7 +3,7 @@
 The scripts in this repository are used to reproduce the results for our recent work on large-scale assessment of heterogeneous ensembles in protein function predicton (PFP) (https://f1000research.com/articles/7-1577/v1). 
 
 To cite this work:
-Wang L, Law J, Kale SD et al. Large-scale protein function prediction using heterogeneous ensembles [version 1; referees: awaiting peer review]. F1000Research 2018, 7(ISCB Comm J):1577
+Wang L, Law J, Kale SD et al. Large-scale protein function prediction using heterogeneous ensembles. F1000Research 2018, 7(ISCB Comm J):1577
 (doi: 10.12688/f1000research.16415.1)
 
 ## Data availability
