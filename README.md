@@ -5,7 +5,7 @@ The scripts in this repository are used to reproduce the results for our recent 
 To cite this work: Wang L, Law J, Kale SD et al. Large-scale protein function prediction using heterogeneous ensembles. F1000Research 2018, 7(ISCB Comm J):1577 (doi: 10.12688/f1000research.16415.1)
 
 ## Configurations:
-	1. Install Java and grrovy.
+	1. Install Java and groovy.
 		This can be done using sdkman (https://sdkman.io/).
 	2. Install python environments.
 		conda create --name largegopred
