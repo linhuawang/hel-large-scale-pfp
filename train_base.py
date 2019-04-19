@@ -1,6 +1,6 @@
 
 """
-	This script is used to submit single job to LSF based cluster Minerva for one GO term given the path to the data.
+	This script is used to submit single job to LSF based cluster hpc for one GO term given the path to the data.
 	Requested cpu number is 50, time is 30 hours and memeory usage no more than 10240 mb
 	
 	Author: Linhua Wang
@@ -40,7 +40,7 @@ parser.add_argument('--node', '-N', type=str, default='20', help='number of node
 parser.add_argument('--time', '-T', type=str, default='10:00', help='number of hours requested')
 parser.add_argument('--memory', '-M', type=str,default='10240', help='memory requsted in MB')
 parser.add_argument('--classpath', '-CP', type=str,default='./weka.jar', help='path to weka.jar')
-parser.add_argument('--minerva', '-MIN', type=str2bool,default='true', help='use minerva cluster or not')
+parser.add_argument('--hpc', '-MIN', type=str2bool,default='true', help='use hpc cluster or not')
 parser.add_argument('--seed', '-S', type=str,default='1', help='the seed use to generate cross-validataion data')
 
 ### Get attributes
@@ -80,8 +80,8 @@ working_dir = dirname(abspath(argv[0]))
 all_parameters = list(product([working_dir], [path], classifiers, fold_values, bag_values,[pipeline],[args.seed]))
 make_jobs(all_parameters)
 
-if args.minerva:
-    print 'submitting largeGOPred job to Minerva...'
+if args.hpc:
+    print 'submitting largeGOPred job to hpc...'
     ####### Write the lsf file 
     script = open(data + '.lsf','w')
     script.write('#!/bin/bash\n#BSUB -P acc_pandeg01a\n#BSUB -q %s\n#BSUB -J %s\n#BSUB -W %s\n#BSUB -R rusage[mem=%s]\n#BSUB -n %s\n#BSUB -sp 100\n' %(args.queue,data,args.time,args.memory,args.node))
