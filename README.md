@@ -9,7 +9,7 @@ To cite this work: Wang L, Law J, Kale SD et al. Large-scale protein function pr
 		This can be done using sdkman (https://sdkman.io/).
 	2. Install python environments.
 		conda create --name largegopred
-		conda install -n largegopred python=2.7.14 cython=0.19.1 pandas scikit-learn
+		conda install -n largegopred python=2.7.14 cython=0.19.1 pandas=0.23.1 scikit-learn=0.19.1
 	3. Download weka.jar to the current directory:
 
 		curl -O -L http://prdownloads.sourceforge.net/weka/weka-3-7-10.zip
@@ -39,11 +39,11 @@ To cite this work: Wang L, Law J, Kale SD et al. Large-scale protein function pr
 	Two options to run the scripts:
 		Option 1: Do it locally.
 
-			python train_base.py --path P --minerva 0
+			python train_base.py --path [path] --minerva 0
 
 		Option 2: Do it on Minerva cluster.
 
-			python train_base.py --path [path] --time T --queue Q --node N --memory M ...
+			python train_base.py --path [path] --time [time] --queue [queue] --node [node] --memory [memory] ...
 
 ## Step 2: Train ensembles and evaluate.
 	In this step, we trained and evaluated the following models:
@@ -59,6 +59,6 @@ To cite this work: Wang L, Law J, Kale SD et al. Large-scale protein function pr
 	
 	To run step 2:
 
-		python ensemble.py --path P --fold fold_count --agg agg_number
+		python ensemble.py --path [path] --fold [fold_count] --agg [1 or bag_count]
 
 	F-max scores of these models will be printed and written in the performance.csv file and saved to the analysis folder under the data path.
